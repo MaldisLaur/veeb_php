@@ -1,30 +1,27 @@
+<style>
+    div {
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        font-size: 70px;
+        padding-top: 15px;
+        text-align: center;
+    }
+    .paaris{
+        background: red;
+    }
+    .paaritu{
+        background: green;
+    }
+</style>
 <?php
-/**
- * Created by PhpStorm.
- * User: maldis-sveno.laur
- * Date: 13.02.2019
- * Time: 14:16
- */
-$eesnimi = 'Maldis';
-$pnimi = "Laur";
-$vanus = 18;
-$kaal = 68;
-$sugu = 'mees';
-
-switch ($sugu) {
-    case 'mees':
-        echo '<p style="color:blue">';
-        break;
-    case 'naine':
-        echo '<p style="color:red">';
-        break;
-    default:
-        echo '<p style="color:green">';
-        break;
+// genereerime juhuslik täisarv vahemikus 0 kuni 100
+$arv = rand(0, 100);
+// arvutame jääk 2-ga jagamisel
+$jaak = $arv % 2;
+// kontrollime kui jääk on 0 - paaris arv
+if($jaak == 0){
+    echo '<div class="paaris">'.$arv.'</div>';
+} else {
+    echo '<div class="paaritu">'.$arv.'</div>';
 }
-
-echo 'Minu eesnimi on '.$eesnimi.'<br>';
-echo 'Perenimi on '.$pnimi.'<br>';
-echo 'Vanust on mul '.$vanus.' aastat<br>';
-echo 'Kaalun '.$kaal.' kilo<br>';
-?>
