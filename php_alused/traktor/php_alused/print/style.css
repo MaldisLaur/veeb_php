@@ -1,0 +1,19 @@
+div {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: 5px solid black;
+}
+.main{
+    margin: auto;
+    border: none;
+}
+#punane {
+    background: red;
+}
+#kollane {
+    background: yellow;
+}
+#roheline {
+    background: green;
+}
